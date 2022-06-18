@@ -5,7 +5,7 @@ const Header = () => {
     <header className="flex sm:flex-row flex-col justify-between items-center h-auto sm:h-16 px-8 shadow-md">
       <div className="my-5 sm:my-0 ">
         <Link href="/">
-          <a className="sm:mr-5   text-red-500 hover:text-red-200 font-extrabold text-xl  ">Petfinder</a>
+          <a className="sm:mr-5   text-red-500 hover:text-red-200 font-extrabold text-xl  ">Petdopter</a>
         </Link>
       </div>
       <nav>
