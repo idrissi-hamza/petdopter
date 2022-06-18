@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "./Header";
 
 const Layout = ({ title, keywords, description, children }) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ title, keywords, description, children }) => {
           rel="stylesheet"
         />
       </Head>
+      <Header/>
       {children}
     </div>
   );
