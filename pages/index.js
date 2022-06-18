@@ -1,6 +1,7 @@
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <div className='text-red-400'>hello world</div>
+    <Layout className='text-red-400'>hello world</Layout>
   )
 }
