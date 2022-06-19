@@ -1,0 +1,6 @@
+{
+  "offers": [
+    { "id": "1", "name": "caterine", "type": "dog", "slug": "cat-345" },
+    { "id": "2", "name": "jack", "type": "cat", "slug": "dog-345" }
+  ]
+}
