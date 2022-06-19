@@ -2,21 +2,19 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section class="hero">
+    <section className="hero">
 
-    <div class="hero-content text-slate-50 ">
+    <div className="hero-content text-slate-50 ">
     
-       <h1 class="text-[6vw]">
+       <h1 className="text-[7vw] text-center">
        Find your new best friend
        </h1>
          
-       <h2 class="text-[2vw] text-center">
-            We offer the best adventure holidays and tailor-made trips!
+       <h2 className="text-[2.5vw] text-center">
+       Browse pets from our network of over 11,500 shelters and rescues.
        </h2>
          
-       {/* <button type="button" class="hero-button" onclick="">
-            Search for pets &raquo;
-       </button> */}
+ 
     
     </div>
 
