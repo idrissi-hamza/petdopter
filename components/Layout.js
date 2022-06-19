@@ -4,7 +4,7 @@ import Header from "./Header";
 
 const Layout = ({ title, keywords, description, children }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col ">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
