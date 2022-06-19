@@ -5,14 +5,14 @@ const Header = () => {
     <header className="flex sm:flex-row flex-col justify-between items-center h-auto sm:h-16 px-8 shadow-md">
       <div className="my-5 sm:my-0 ">
         <Link href="/">
-          <a className="sm:mr-5   text-red-500 hover:text-red-200 font-extrabold text-xl  ">Petdopter</a>
+          <a className="sm:mr-5   text-purple-500 hover:text-red-200 font-extrabold text-xl  ">Petdopter</a>
         </Link>
       </div>
       <nav>
         <ul className="flex items-center justify-center sm:flex-row flex-col text-center  my-5 sm:my-0">
           <li>
             <Link href="/offers">
-            <a className="sm:mr-5 text-slate-700 hover:text-black">Offers</a>
+            <a className="sm:mr-5 text-slate-700 hover:text-black">Pets</a>
             </Link>
           </li>
           <li>
