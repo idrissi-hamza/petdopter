@@ -4,7 +4,7 @@ import Header from "./Header";
 
 const Layout = ({ title, keywords, description, children }) => {
   return (
-    <div className="flex flex-col max-w-6xl mx-auto ">
+    <div className="flex flex-col max-w-8xl mx-auto ">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />

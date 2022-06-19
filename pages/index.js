@@ -25,5 +25,5 @@ export default function Home({ offers }) {
 export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/api/offers`);
   const offers = await res.json();
-  return { props: { offers } };
+  return { props: { offers:offers.slice(0,3) } };
 }
