@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
+import MorePets from "../components/MorePets";
 import PetCard from "../components/PetCard";
 import { API_URL } from "../config/index.js";
 
@@ -17,6 +18,7 @@ export default function Home({ offers }) {
           <PetCard key={pet.id} pet={pet} />
           // <h3 key={pet.id}>{pet.name}</h3>
         ))}
+        <MorePets />
       </div>
     </Layout>
   );
@@ -25,5 +27,5 @@ export default function Home({ offers }) {
 export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/api/offers`);
   const offers = await res.json();
-  return { props: { offers:offers.slice(0,3) } };
+  return { props: { offers: offers.slice(0, 2) } };
 }
