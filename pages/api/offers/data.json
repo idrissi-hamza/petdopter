@@ -12,42 +12,95 @@
       "name": "jack",
       "type": "cat",
       "slug": "dog-345",
-      "image": ""
+      "image": "",
+      "breed": "Domestic Medium Hair",
+      "city": "fes,morocco",
+      "age": "adult",
+      "sexe": "female",
+      "size": "Small",
+      "color": "Black & White",
+      "characteristics":["Affectionate","Playful","Curious","Independent","Friendly","Protective"],
+      "houseTrained":true,
+      "adoptionFees":"$440"
     },
     {
       "id": "3",
       "name": "cate",
       "type": "dog",
       "slug": "cat-345",
-      "image": ""
+      "image": "",
+      "breed": "Domestic Medium Hair",
+      "city": "fes,morocco",
+      "age": "adult",
+      "sexe": "female",
+      "size": "Small",
+      "color": "Black & White",
+      "characteristics":["Affectionate","Playful","Curious","Independent","Friendly","Protective"],
+      "houseTrained":true,
+      "adoptionFees":"$440"
     },
     {
       "id": "4",
       "name": "jacklin",
       "type": "cat",
       "slug": "dog-345",
-      "image": ""
+      "image": "",
+      "breed": "Domestic Medium Hair",
+      "city": "fes,morocco",
+      "age": "adult",
+      "sexe": "female",
+      "size": "Small",
+      "color": "Black & White",
+      "characteristics":["Affectionate","Playful","Curious","Independent","Friendly","Protective"],
+      "houseTrained":true,
+      "adoptionFees":"$440"
     },
     {
       "id": "5",
       "name": "cdrose",
       "type": "dog",
       "slug": "cat-345",
-      "image": ""
+      "image": "",
+      "breed": "Domestic Medium Hair",
+      "city": "fes,morocco",
+      "age": "adult",
+      "sexe": "female",
+      "size": "Small",
+      "color": "Black & White",
+      "characteristics":["Affectionate","Playful","Curious","Independent","Friendly","Protective"],
+      "houseTrained":true,
+      "adoptionFees":"$440"
     },
     {
       "id": "6",
       "name": "jacklop",
       "type": "cat",
       "slug": "dog-345",
-      "image": ""
+      "image": "",
+      "breed": "Domestic Medium Hair",
+      "city": "fes,morocco",
+      "age": "adult",
+      "sexe": "female",
+      "size": "Small",
+      "color": "Black & White",
+      "characteristics":["Affectionate","Playful","Curious","Independent","Friendly","Protective"],
+      "houseTrained":true,
+      "adoptionFees":"$440"
     },
     {
       "id": "7",
       "name": "novke",
-      "type": "dog",
       "slug": "cat-345",
-      "image": ""
+      "image": "",
+      "breed": "Domestic Medium Hair",
+      "city": "fes,morocco",
+      "age": "adult",
+      "sexe": "female",
+      "size": "Small",
+      "color": "Black & White",
+      "characteristics":["Affectionate","Playful","Curious","Independent","Friendly","Protective"],
+      "houseTrained":true,
+      "adoptionFees":"$440"
     }
   ]
 }
