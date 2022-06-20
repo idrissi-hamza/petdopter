@@ -5,7 +5,16 @@
       "name": "caterine",
       "type": "dog",
       "slug": "cat-345",
-      "image": ""
+      "image": "",
+      "breed": "Domestic Medium Hair",
+      "city": "fes,morocco",
+      "age": "adult",
+      "sexe": "female",
+      "size": "Small",
+      "color": "Black & White",
+      "characteristics":["Affectionate","Playful","Curious","Independent","Friendly","Protective"],
+      "houseTrained":true,
+      "adoptionFees":"$440"
     },
     {
       "id": "2",
