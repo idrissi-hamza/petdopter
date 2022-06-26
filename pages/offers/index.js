@@ -9,7 +9,7 @@ import PetCard from "../../components/PetCard";
 import { API_URL } from "../../config";
 
 export default function Index({ offers }) {
-  console.log(offers);
+  console.log("offers***********", offers);
   return (
     <Layout>
       {/* <Hero /> */}
@@ -19,8 +19,10 @@ export default function Index({ offers }) {
       <div className=" px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center gap-5 sm:space-y-0 space-y-5">
         {offers.length === 0 && <h3>no pets to show</h3>}
         {offers.map((pet) => (
-          <PetCard key={pet.id} pet={pet} />
-          // <h3 key={pet.id}>{pet.name}</h3>
+          <>
+            <PetCard key={pet.id} pet={pet} />
+            <pre>{JSON.stringify(pet, null, 2)}</pre>
+          </>
         ))}
       </div>
     </Layout>
@@ -29,6 +31,6 @@ export default function Index({ offers }) {
 
 export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/api/offers`);
-  const offers = await res.json();
-  return { props: { offers } };
+  const offersResponse = await res.json();
+  return { props: { offers: offersResponse.data } };
 }

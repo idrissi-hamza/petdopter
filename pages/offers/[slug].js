@@ -98,12 +98,13 @@ const OffersPage = ({ pet }) => {
 export default OffersPage;
 
 export async function getServerSideProps({ query: { slug } }) {
-  const res = await fetch(`${API_URL}/api/offers/${slug}`);
+  console.log("slug***************************",slug);
+  const res = await fetch(`${API_URL}/api/offers?filters[slug][$eq]=${slug}`);
   const pets = await res.json();
 
   return {
     props: {
-      pet: pets[0],
+      pet: pets.data[0],
     },
   };
 }
