@@ -21,7 +21,6 @@ export default function Index({ offers }) {
         {offers.map((pet) => (
           <>
             <PetCard key={pet.id} pet={pet} />
-            <pre>{JSON.stringify(pet, null, 2)}</pre>
           </>
         ))}
       </div>
@@ -30,7 +29,7 @@ export default function Index({ offers }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`${API_URL}/api/offers`);
+  const res = await fetch(`${API_URL}/api/pets`);
   const offersResponse = await res.json();
   return { props: { offers: offersResponse.data } };
 }

@@ -7,15 +7,21 @@ const OffersPage = ({ pet }) => {
   const {
     query: { slug },
   } = useRouter();
+
   // const { slug } = query;
 
   return (
     <Layout>
+      {/* <pre>{JSON.stringify(pet,null,2)}</pre> */}
       <div className="my-6 mx-auto flex flex-col ">
         <div className=" flex  w-[80vw] items-center justify-center">
           <div className="w-72 border mt-2 ">
             <Image
-              src={pet.image ? pet.image : "/images/pet-default.jpg"}
+              src={
+                pet.attributes.image
+                  ? pet.attributes.image
+                  : "/images/pet-default.jpg"
+              }
               width={920}
               height={800}
             />
@@ -23,10 +29,12 @@ const OffersPage = ({ pet }) => {
         </div>
         <div className=" rounded-xl p-6   mt-5 text-slate-700">
           <div className="flex flex-col  items-center justify-center space-y-4 bg-white mb-4 p-10 rounded-xl">
-            <h1 className="text-4xl text-slate-700  mb-6  ">{pet.name}</h1>
-            <div className="w-full h-[1px] bg-slate-200"/>
+            <h1 className="text-4xl text-slate-700  mb-6  ">
+              {pet.attributes.name}
+            </h1>
+            <div className="w-full h-[1px] bg-slate-200" />
             <div className="flex space-x-3  items-center justify-center">
-              <span className="relative">{pet.breed} </span>
+              <span className="relative">{pet.attributes.breed} </span>
               <div className="w-1 h-1 bg-slate-500 rounded flex "></div>
 
               <span className=""> city</span>
@@ -98,8 +106,7 @@ const OffersPage = ({ pet }) => {
 export default OffersPage;
 
 export async function getServerSideProps({ query: { slug } }) {
-  console.log("slug***************************",slug);
-  const res = await fetch(`${API_URL}/api/offers?filters[slug][$eq]=${slug}`);
+  const res = await fetch(`${API_URL}/api/pets?filters[slug][$eq]=${slug}`);
   const pets = await res.json();
 
   return {
