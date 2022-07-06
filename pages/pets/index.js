@@ -8,8 +8,8 @@ import Layout from "../../components/Layout";
 import PetCard from "../../components/PetCard";
 import { API_URL } from "../../config";
 
-export default function Index({ offers }) {
-  console.log("offers***********", offers);
+export default function Index({ pets }) {
+  console.log("pets***********", pets);
   return (
     <Layout>
       {/* <Hero /> */}
@@ -17,8 +17,8 @@ export default function Index({ offers }) {
         Pets Available for Adoption
       </h1>
       <div className=" px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center gap-5 sm:space-y-0 space-y-5">
-        {offers.length === 0 && <h3>no pets to show</h3>}
-        {offers.map((pet) => (
+        {pets.length === 0 && <h3>no pets to show</h3>}
+        {pets.map((pet) => (
           <>
             <PetCard key={pet.id} pet={pet} />
           </>
@@ -30,6 +30,6 @@ export default function Index({ offers }) {
 
 export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/api/pets`);
-  const offersResponse = await res.json();
-  return { props: { offers: offersResponse.data } };
+  const petsResponse = await res.json();
+  return { props: { pets: petsResponse.data } };
 }

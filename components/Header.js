@@ -11,12 +11,12 @@ const Header = () => {
       <nav>
         <ul className="flex items-center justify-center sm:flex-row flex-col text-center  my-5 sm:my-0">
           <li>
-            <Link href="/offers">
+            <Link href="/pets">
             <a className="sm:mr-5 text-slate-700 hover:text-black">Pets</a>
             </Link>
           </li>
           <li>
-            <Link href="/offers">
+            <Link href="/pets">
             <a className="sm:mr-5 text-slate-700 hover:text-black">signin</a>
             </Link>
           </li>
