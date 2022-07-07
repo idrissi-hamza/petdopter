@@ -29,7 +29,7 @@ export default function Index({ pets }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`${API_URL}/api/pets`);
+  const res = await fetch(`${API_URL}/api/pets?populate=*`);
   const petsResponse = await res.json();
   return { props: { pets: petsResponse.data } };
 }

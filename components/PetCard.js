@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const PetCard = ({ pet }) => {
   return (
-    <Link href={`/offers/${pet.attributes.slug}`}>
+    <Link href={`/pets/${pet.attributes.slug}`}>
       <a className=" group cursor-pointer transition duration-200  transform sm:hover:scale-105 border border-purple-500 bg-purple-500 rounded-xl overflow-hidden">
         <Image
           src={pet.attributes.image ? pet.attributes.image.data.attributes.formats.medium.url : "/images/pet-default.jpg"}
