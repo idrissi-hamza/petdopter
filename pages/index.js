@@ -18,7 +18,7 @@ export default function Home({ pets }) {
           <PetCard key={pet.id} pet={pet} />
           // <h3 key={pet.id}>{pet.name}</h3>
         ))}
-        <MorePets />
+        <MorePets pet={pets[0]}/>
       </div>
     </Layout>
   );

@@ -24,10 +24,12 @@ const OffersPage = ({ pet }) => {
             <h1 className="text-4xl   mb-6  ">{pet.attributes.name}</h1>
             <div className="w-full h-[2px] bg-purple-300 " />
             <div className="flex space-x-3  items-center justify-center">
-              <span className="relative">{pet.attributes.breed} </span>
+              <span className="relative font-semibold tracking-wide">
+                {pet.attributes.breed}{" "}
+              </span>
               <div className="w-1 h-1 bg-purple-500 rounded flex "></div>
 
-              <span className=""> city</span>
+              <span className=""> {pet.attributes.adress.split(",").map(c=>c.slice(0,1).toUpperCase() + c.slice(1)).join(", ")}</span>
             </div>
             <div className="flex space-x-3  items-center justify-center ">
               <span className="relative">{pet.attributes.age} </span>
@@ -57,9 +59,7 @@ const OffersPage = ({ pet }) => {
               </div>
               <div className="w-72">
                 <h1 className="text-xl font-medium mb-1">Address</h1>
-                <div className="text-slate-600">
-                  {pet.attributes.adress}
-                </div>
+                <div className="text-slate-600">{pet.attributes.adress}</div>
               </div>
               <div className="w-72">
                 <h1 className="text-xl font-medium mb-1">Adoption Fees</h1>
@@ -76,14 +76,12 @@ const OffersPage = ({ pet }) => {
               <div className="w-72">
                 <h1 className="text-xl font-medium mb-1">House Trained</h1>
                 <div className="text-slate-600">
-                  {pet.attributes.houseTrained ? "Yes":"No"}
+                  {pet.attributes.houseTrained ? "Yes" : "No"}
                 </div>
               </div>
               <div className="w-72">
                 <h1 className="text-xl font-medium mb-1">Health</h1>
-                <div className="text-slate-600">
-                  {pet.attributes.health}
-                </div>
+                <div className="text-slate-600">{pet.attributes.health}</div>
               </div>
             </div>
           </div>

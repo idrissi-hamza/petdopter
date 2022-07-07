@@ -3,9 +3,16 @@ import Image from "next/image";
 
 const MorePets = ({ pet }) => {
   return (
-    <Link href="/offers">
+    <Link href="/pets">
       <a className="flex flex-col group cursor-pointer transition duration-200  transform sm:hover:scale-105 border border-purple-700 bg-purple-500 rounded-xl overflow-hidden text-white">
-        <Image src={"/images/search-pet.jpg"} width={520} height={350} />
+        {/* <Image src={"/images/search-pet.jpg"} width={520} height={350} /> */}
+        <Image
+          src={pet.attributes.image ? pet.attributes.image.data.attributes.formats.medium.url : "/images/pet-default.jpg"}
+          // layout="fill"
+          width={920}
+          height={800}
+
+        />
         <div className="p-2 flex-1 flex items-center justify-center text-lg  bg-purple-700">
           More pets available on Petdopter
         </div>
