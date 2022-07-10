@@ -17,7 +17,7 @@ const Header = () => {
         <ul className="flex items-center justify-center sm:flex-row flex-col text-center  my-5 sm:my-0">
           {navLinks.map((link) => (
             <li>
-              <Link href={link.toLowerCase().split(" ").join()}>
+              <Link href={link.toLowerCase().split(" ").join("")}>
                 <a className="sm:mr-5 text-slate-700 hover:text-black">
                   {link}
                 </a>

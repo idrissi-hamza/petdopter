@@ -13,7 +13,7 @@ export default function SearchPage({ pets }) {
   return (
     <>
       <Layout>
-        <div className="p-6 px-8 sm:px-10">
+        <div className="p-6 px-8 sm:px-10 flex flex-col justify-center items-center min-h-[60vh]">
           <Link href="/pets">
             <a className="text-blue-500 font-semibold">Go Back</a>
           </Link>
