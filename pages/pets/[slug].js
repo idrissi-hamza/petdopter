@@ -98,7 +98,14 @@ export async function getServerSideProps({ query: { slug } }) {
     `${API_URL}/api/pets?filters[slug][$eq]=${slug}&populate=*`
   );
   const pets = await res.json();
-  console.log(slug, "*******************************slug");
+
+  if (pets.data.length===0) {
+    return {
+      notFound: true,
+    }
+  }
+
+  // console.log(slug, "*******************************slug");
   return {
     props: {
       pet: pets.data[0],
