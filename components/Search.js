@@ -21,7 +21,7 @@ export default function Search() {
           type="text"
           value={term}
           onChange={(e) => setTerm(e.target.value)}
-          placeholder="Search Events"
+          placeholder="Search Pets"
         />
         <div className="absolute top-1 left-1 p-1 text-slate-400">
           <FiSearch />

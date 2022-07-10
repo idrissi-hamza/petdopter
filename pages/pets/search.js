@@ -17,11 +17,13 @@ export default function SearchPage({ pets }) {
           <Link href="/pets">
             <a className="text-blue-500 font-semibold">Go Back</a>
           </Link>
+          {/* { <h3>no pets to show</h3>} */}
           <h1 className="text-4xl text-purple-700 text-center m-6">
-            Search Results for {router.query.term}
+            {pets.length !== 0
+              ? `Search Results for ${router.query.term}`
+              : `No pets to show for ${router.query.term}`}
           </h1>
           <div className=" px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center gap-5 sm:space-y-0 space-y-5">
-            {pets.length === 0 && <h3>no pets to show</h3>}
             {pets.map((pet) => (
               <>
                 <PetCard key={pet.id} pet={pet} />
@@ -35,7 +37,6 @@ export default function SearchPage({ pets }) {
   );
 }
 
-
 // http://localhost:3000/pets/search?term=fes
 export async function getServerSideProps({ query: { term } }) {
   const query = qs.stringify({
@@ -45,7 +46,6 @@ export async function getServerSideProps({ query: { term } }) {
         { characteristics: { $contains: term } },
         { breed: { $contains: term } },
         { adress: { $contains: term } },
-       
       ],
     },
   });
