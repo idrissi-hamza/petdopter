@@ -3,9 +3,9 @@ import Search from "./Search";
 
 const Header = () => {
   const navLinks = [
-    { label: "Pets", link: "pets" },
-    { label: "Sign In", link: "signin" },
-    { label: "Post pet", link: "pets/postpet" },
+    { label: "Pets", link: "/pets" },
+    { label: "Sign In", link: "/signin" },
+    { label: "Post pet", link: "/postpet" },
   ];
   return (
     <header className="flex sm:flex-row flex-col justify-between items-center h-auto sm:h-16 px-8 shadow-md">

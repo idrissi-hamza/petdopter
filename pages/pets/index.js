@@ -9,7 +9,7 @@ import PetCard from "../../components/PetCard";
 import { API_URL } from "../../config";
 
 export default function Index({ pets }) {
-  console.log("pets***********", pets);
+  // console.log("pets***********", pets);
   return (
     <Layout>
       {/* <Hero /> */}
